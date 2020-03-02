@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "OpenLaw NZ <enquiries@openlaw.nz>",
   "dependencies": {
-    "date-fns": "^2.9.0",
+    "date-fns": "^2.10.0",
     "dompurify": "^2.0.8",
     "fast-memoize": "^2.5.1",
     "gatsby": "^2.19.7",
