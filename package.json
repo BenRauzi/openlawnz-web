@@ -8,7 +8,7 @@
     "dompurify": "^2.0.8",
     "fast-memoize": "^2.5.1",
     "gatsby": "^2.19.7",
-    "gatsby-image": "^2.2.39",
+    "gatsby-image": "^2.2.43",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-netlify-cms": "^4.1.40",
     "gatsby-plugin-offline": "^3.0.32",
