@@ -10,12 +10,20 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     })
   }
+  if (node.internal.type === `MicrositesJson`) {
+    const slug = createFilePath({ node, getNode, basePath: `microsites` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
 }
 
 exports.createPages = async ({graphql, actions: { createPage } }) => {
 
   const result = await graphql(`
-    query NewsQuery {
+    query PagesQuery {
       allNewsJson {
         edges {
           node {
@@ -31,6 +39,24 @@ exports.createPages = async ({graphql, actions: { createPage } }) => {
           }
         }
       }
+      allMicrositesJson {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            title
+            description
+            content {
+              title
+              paragraphs {
+                title
+                content_html
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -40,7 +66,10 @@ exports.createPages = async ({graphql, actions: { createPage } }) => {
     .sort((a,b) => {
       return +new Date(b.date) - +new Date(a.date)
     })
-
+  
+  const micrositeData = result.data.allMicrositesJson.edges 
+    .map(n => n.node)
+    .map(n => ({ ...n, slug: n.fields.slug }))
 
   createPage({
     path: `/news`,
@@ -58,6 +87,15 @@ exports.createPages = async ({graphql, actions: { createPage } }) => {
       context: n,
     })
   })
+
+  micrositeData.forEach(n => {
+    createPage( {
+      path: '/microsite' + n.slug,
+      component: require.resolve("./src/templates/microsite.js"),
+      context: n,
+    })
+  })
+
 }
 
 exports.onCreatePage = ({ page, actions }) => {

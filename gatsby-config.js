@@ -5,6 +5,7 @@ module.exports = {
     author: `OpenLaw NZ`,
   },
   plugins: [
+    `gatsby-plugin-anchor-links`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

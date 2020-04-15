@@ -5,3 +5,9 @@
  */
 
 // You can delete this file if you're not using it
+
+const anchorate = require('anchorate');
+
+exports.onRouteUpdate = () => {
+  anchorate.anchorate()
+}

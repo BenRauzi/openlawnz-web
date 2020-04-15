@@ -11,16 +11,13 @@ const DevelopersPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Developers" />  
-      <div className="highlighted-content">
-        <SearchContainer />
-        <InfoCard classModifier="info-card--large info-card--title info-card--column">
+      <InfoCard classModifier="info-card--large info-card--title info-card--column">
           <h1>Developers</h1>
           <span>
             Use our API to integrate case law intelligence into your own
             applications.
           </span>
         </InfoCard>
-      </div>
       <div className="home-wrapper">
         <div className="container main">
           <div className="content" dangerouslySetInnerHTML={{

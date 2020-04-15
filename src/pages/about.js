@@ -3,6 +3,10 @@ import Layout from "../components/layout"
 import InfoCard from "../components/InfoCard.jsx"
 import SearchContainer from "../components/SearchContainer.jsx"
 import SEO from "../components/seo"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import TertiaryNav from "../components/TertiaryNav.jsx"
+
+
 
 const AboutPage = ({data}) => {
   const aboutJson = data.allAboutJson.edges.map(n => n.node)[0]
@@ -11,20 +15,15 @@ const AboutPage = ({data}) => {
   return (
     <Layout>
       <SEO title="About" />
-      <div className="highlighted-content">
-        <SearchContainer />
-        <InfoCard classModifier="info-card--large info-card--title info-card--column-nosub">
-          <h1>About Us</h1>
-        </InfoCard>
-      </div>
       <div className="home-wrapper">
+      <div className="side-wrapper">
         <div className="container main">
-          <div className="content">
+          <div name="test" className="content">
           {
             aboutJson.content.map(({title, content_html}, idx) => {
               return (
                 <div style={{marginBottom: '40px'}} key={idx}>
-                <h2>{title}</h2>
+                <h2 name={`${title}`}>{title}</h2>
                   <div dangerouslySetInnerHTML={{
                     __html: content_html,
                   }}>
@@ -44,7 +43,7 @@ const AboutPage = ({data}) => {
 
             <hr className="divider" />
 
-            <h2>Directors</h2>
+            <h2 name="test2">Directors</h2>
             <div className="cards-list directors">
             
             <div className="card-item">
@@ -65,7 +64,7 @@ const AboutPage = ({data}) => {
 
             </div>
 
-            <h2>Past and Present Contributors</h2>
+            <h2 name="test">Past and Present Contributors</h2>
 
             <div className="cards-list">
 
@@ -85,6 +84,16 @@ const AboutPage = ({data}) => {
           </div>
         </div>
       </div>
+      <TertiaryNav 
+      base="/about/" 
+      data={
+        aboutJson.content.map(({title}) =>  {
+          return [title, title]
+      })
+      }/>
+      </div>
+      
+      
     </Layout>
   )
 }

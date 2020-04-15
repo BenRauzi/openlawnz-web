@@ -49,6 +49,11 @@ export default class Search extends Component {
               <label className="search-label" htmlFor="searchTerm">
                 Search legal cases
               </label>
+              
+              <button type="submit" className="search-button" title="Search">
+                <SearchIcon />
+              </button>
+
               <input
                 id="searchTerm"
                 type="text"
@@ -57,18 +62,22 @@ export default class Search extends Component {
                 onChange={this.handleChange.bind(this)}
                 value={this.state.currentSearchQuery}
               />
-              <button type="submit" className="search-button" title="Search">
-                <SearchIcon />
-              </button>
+              
             </div>
             <button type="submit" className="search-submit-button">
               Search
             </button>
           </form>
           {this.props.toggleTypeOfSearch && (
-            <a href="#advanced-search" className="toggle-search" onClick={this.props.toggleTypeOfSearch}>
+            <div className="toggle-search">
+              <a>
+                Search Help
+              </a>
+              <a href="#advanced-search" onClick={this.props.toggleTypeOfSearch}>
               Advanced Search
-            </a>
+              </a>
+            </div>
+            
           )}
         </div>
         {this.state.searchMsg ? (

@@ -26,6 +26,13 @@
     margin-top: 0;
   }
 
+  h4 {
+    @include header-five;
+    color: $openLawDarkGreen;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
   img {
     max-width: 100%;
   }
@@ -203,3 +210,5 @@
   cursor: pointer;
   outline: inherit;
 }
+
+

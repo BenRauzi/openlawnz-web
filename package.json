@@ -4,11 +4,13 @@
   "version": "0.1.0",
   "author": "OpenLaw NZ <enquiries@openlaw.nz>",
   "dependencies": {
+    "anchorate": "^1.2.3",
     "date-fns": "^2.11.1",
     "dompurify": "^2.0.8",
     "fast-memoize": "^2.5.2",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
+    "gatsby-plugin-anchor-links": "^1.1.1",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-manifest": "^2.3.1",
     "gatsby-plugin-netlify-cms": "^4.2.2",

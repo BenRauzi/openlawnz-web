@@ -9,8 +9,8 @@ const PluginShowcase = props => {
           <div key={idx} className="item">
             
             <div className="content">
-              
-            <h2>{title}</h2>
+            
+            <h2 name={title}>{title}</h2>
 
             <div dangerouslySetInnerHTML={{
               __html: content_html,

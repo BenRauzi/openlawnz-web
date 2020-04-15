@@ -3,11 +3,10 @@ import { Link } from "gatsby"
 
 import Logo from "../images/svgs/openlaw-logo.svg"
 import External from "../images/svgs/external.svg"
+import SearchContainer from "./SearchContainer"
+
 
 const MainNav = () => {
-  const [isNavOpen, setIsNavOpen] = React.useState(false)
-  const toggleNavState = () => setIsNavOpen(!isNavOpen)
-
   return (
     <header role="banner" className="nav-container">
       <div className="nav-items">
@@ -17,53 +16,26 @@ const MainNav = () => {
             <Logo alt="OpenLaw NZ" className="main-logo" />
           </Link>
         </div>
-        <nav className="nav-links" id="menuToggle">
-          <input
-            aria-hidden
-            type="checkbox"
-            checked={isNavOpen}
-            onChange={toggleNavState}
-          />
-          <span></span>
-          <span></span>
-          <span></span>
-
-          <ul id="menu">
-            <li>
-              <Link to="/about" onClick={toggleNavState}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/news" onClick={toggleNavState}>
-                News
-              </Link>
-            </li>
-            <li>
-              <Link to="/plugins" onClick={toggleNavState}>
-                Plugins
-              </Link>
-            </li>
-            <li>
-              <Link to="/developers" onClick={toggleNavState}>
-                Developers
-              </Link>
-            </li>
-            <li>
-              <a
-                href="https://donorbox.org/openlaw-nz-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={toggleNavState}
-              >
-                Support Us{" "}
-                <sup>
-                  <External className="icon icon-small white" alt="External" />
-                </sup>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div className="nav-search">
+          <SearchContainer/>
+        </div>
+        <div className="nav-menu">
+          <nav>
+            <ul>
+              <Link activeClassName="link-active" to="/"><li>Our Mission</li></Link>
+              <Link to="/empower" activeClassName="link-active"><li>Get Empowered</li></Link>
+              <Link to="/about" activeClassName="link-active"><li>Get Involved</li></Link>
+              <Link activeClassName="link-active" to="/news"><li>Blog</li></Link>
+            </ul>
+          </nav>
+          <div className="nav-secondary">
+          <ul>
+              <a href="https://donorbox.org/openlaw-nz-3"><li>Support Us</li></a>
+              <Link to="/developers"><li>Developers</li></Link>
+              <Link to="/plugins"><li>Plugins</li></Link>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
   )

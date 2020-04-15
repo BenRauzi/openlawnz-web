@@ -98,3 +98,26 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: content_html, label: Content, widget: markdown }
+  
+  - name: microsites
+    label: Microsites
+    label_singular: Microsite
+    folder: content/microsites
+    create: true
+    extension: json
+    fields:
+      - { name: title, Label: Title}
+      - { name: description, Label: Description, widget: markdown }
+      - label: Sections
+        label_singular: Section
+        name: content
+        widget: list
+        fields:
+          - { name: title, Label: Title }
+          - label: Paragraphs
+            label_singular: Paragraph
+            name: paragraphs
+            widget: list
+            fields:
+              - { name: title, Label: Title}
+              - { name: content_html, Label: Content, widget: markdown }

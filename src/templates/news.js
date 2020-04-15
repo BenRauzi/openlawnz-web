@@ -9,13 +9,10 @@ import SEO from "../components/seo"
 const News = ({ pageContext }) => (
   <Layout>
     <SEO title="News" />
-    <div className="highlighted-content">
-      <SearchContainer />
-      <InfoCard classModifier="info-card--large info-card--title info-card--column-nosub">
-        <h1>News</h1>
-        <span>Stay up to date with us.</span>
-      </InfoCard>
-    </div>
+    <InfoCard classModifier="info-card--large info-card--title info-card--column-nosub">
+      <h1>News</h1>
+      <span>Stay up to date with us.</span>
+    </InfoCard>
     <div className="home-wrapper">
       <div className="container news-list">
         {pageContext.news.map((ni, idx) => (
