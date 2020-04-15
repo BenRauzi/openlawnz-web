@@ -22,10 +22,10 @@ const EmpowerPage = ({ data }) => {
                     {
                        micrositeData.map(({title, description, fields}, idx) => {
                            return (
-                               <div key={idx}>
+                               <div className="microsite-paragraph" key={idx}>
                                    <h3 name={fields.slug.slice(1)}>{title}</h3>
                                    <p>{description}</p>
-                                    <Link to={"/microsite" + fields.slug}>View Site</Link>
+                                   <Link to={"/microsite" + fields.slug}>View Site</Link>
                                 </div>
                            )
                        }) 

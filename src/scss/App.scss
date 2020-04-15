@@ -173,7 +173,28 @@ li {
 .microsite-paragraph {
   margin-bottom: 10px;
   font-size: 15px;
+  ul {
+    li {
+      list-style-type: square;
+      ul {
+        li {
+          list-style-type: circle;
+        }
+      }
+    }
+  }
+  ol {
+    li {
+      list-style-type: decimal;
+      ol {
+        li {
+          list-style-type: lower-alpha;
+        }
+      }
+    }
+  }
 }
+
 
 .teritary-nav {
   width: 25vw;
