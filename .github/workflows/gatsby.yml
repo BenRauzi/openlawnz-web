@@ -5,7 +5,7 @@ name: Gatsby Build
 
 on:
   push:
-    branches: [  staging, development ]
+    branches: [ staging, development ]
   pull_request:
     branches: [ master, staging, development ]
 
