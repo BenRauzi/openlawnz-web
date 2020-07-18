@@ -29,7 +29,6 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
     )
     switch(module.type) { 
       case "text": // Single heading, multiple paragraphs.
-
         if (module.content === undefined) return blankModule()
         return (
           <div id={title} className="module-block">
@@ -46,26 +45,25 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
             }
           </div>
         )
-        case "card": // Single heading, multiple paragraphs.
 
-        if (module.content === undefined) return blankModule()
-        return (
-          <div id={title} className="plugin-card">
-            <header>{module.title}</header>
-            <div className="plugin-body">
-              {
-                module.content.map(({content_html}, idx) => {
-                  return (
-                    <p key={idx}
-                      dangerouslySetInnerHTML={{ __html: content_html }}
-                    />
-                  ) 
-                })
-              }
+        case "card": // Single heading, multiple paragraphs.
+          if (module.content === undefined) return blankModule()
+          return (
+            <div id={title} className="plugin-card">
+              <header>{module.title}</header>
+              <div className="plugin-body">
+                {
+                  module.content.map(({content_html}, idx) => {
+                    return (
+                      <p key={idx}
+                        dangerouslySetInnerHTML={{ __html: content_html }}
+                      />
+                    ) 
+                  })
+                }
+              </div>
             </div>
-           
-          </div>
-        )
+          )
 
         case "faqs":
           if (module.content === undefined) return blankModule()
@@ -77,6 +75,7 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
                 })}/>
             </div>
             )
+
         case "contributors":
             if (module.contributors === undefined) return blankModule()
             return (
@@ -98,6 +97,7 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
                 </div>
               </div>
             )
+
         case "directors":
             if (module.directors === undefined) return blankModule()
             return (
@@ -117,6 +117,7 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
                 
                 </div>
             )
+
         case "wizard":
             // This is uncomfortably fragile but the Netlify CMS does not support auto-generated ID/key fields
             // as of 29/05/2020
@@ -127,6 +128,7 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
                 <Wizard title={wizardData.title} background={wizardData.background} steps={wizardData.steps} />
             </div>
             )
+
         case "checklist":
           if (module.content === undefined) return blankModule()
           return (
@@ -135,6 +137,7 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
               <Checklist id={`checklist-${idx}`} items={module.content}/>
             </div>
           )
+
         case "case_list":
           if (module.cases === undefined) return blankModule()
           return (
@@ -143,6 +146,7 @@ const ModuleSelector = ({module, idx, wizardModuleData}) => {
               <CaseList id={`case-list-${idx}`} cases={module.cases}/>
             </div>
           )
+          
         default: //Error Paragraph
             return errorModule("Module type not found")
     }
