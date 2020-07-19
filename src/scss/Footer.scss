@@ -3,6 +3,7 @@
     width: 100vw;
     height: 197px;
     background-color: $openLawDarkGreen;
+    overflow: hidden;
   }
   
   .law-foundation-nav-logo{
@@ -26,7 +27,6 @@
       display: flex;
       flex-direction: column;
     }
-    
   }
 
   .footer-contact-us{

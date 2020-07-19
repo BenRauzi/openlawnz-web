@@ -6,7 +6,7 @@ const NewsSpotlight = props => {
     <section className="news-container">
       <div className="news-items">
         <h1>
-          <Link to="/news">News</Link>
+          <Link to="/news">Latest Articles</Link>
         </h1>
         <div className="news-cards-wrapper">
           {props.data.slice(0,3).map(
@@ -19,10 +19,9 @@ const NewsSpotlight = props => {
                 )}
                 <div>
                   <h2>{title}</h2>
-                  <p dangerouslySetInnerHTML={{
+                  <div dangerouslySetInnerHTML={{
                     __html: summary,
-                  }}>
-                  </p>
+                  }}/>
 
        
 
