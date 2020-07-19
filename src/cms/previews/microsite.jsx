@@ -25,6 +25,8 @@ export default function MicrositesPreview(props) {
     <>
     <div className="section-selector"> 
       <label htmlFor="select-section">Select section:&nbsp;</label>
+      {/*Changing to onBlur breaks the component*/}
+      {/*eslint-disable-next-line jsx-a11y/no-onchange*/}
       <select id="select-section" onChange={handleSelect} value={currentSectionIndex}>
         {content.map(({ title }, index) => <option value={index}>{title}</option>)}
       </select>
