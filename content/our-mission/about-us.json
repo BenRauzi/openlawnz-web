@@ -1,132 +1,52 @@
 {
   "title": "About Us",
-  "description": "OpenLaw NZ is an open-source legal data platform. Our goal is to improve the accessibility of case law and other legal information in New Zealand. We want to make it easier for all New Zealanders to understand law. ",
-  "content": [
+  "description": "OpenLawNZ is an open-source legal data platform.We are not a disruptor to the legal profession.Our goal is to improve the accessibility of case law and other legal information in New Zealand.",
+  "modules": [
     {
       "type": "text",
-      "title": "Summary",
+      "title": "New Zealand has a problem with access to justice ",
       "content": [
         {
-          "content_html": "OpenLaw NZ is an open-source legal data platform. Our goal is to improve the accessibility of case law and other legal information in New Zealand. We want to make it easier for all New Zealanders to understand law. ",
-          "title": "What Openlaw is"
+          "content_html": "Being able to obtain helpful information about the law is important for a functioning democracy.",
+          "title": "Helpful Information"
         },
         {
-          "content_html": "You can use our search to find case law, and navigate between related information. You can also use our plugins (or write your own) to aid your research. ",
-          "title": "Search"
+          "content_html": "<i>“In order to protect their rights, citizens must have a means of accessing and understanding substantive law.”- Chief Justice Helen Winkelmann</i>",
+          "title": "Quote"
         },
         {
-          "content_html": "You can use our API to build case law intelligence into your own applications and services. For an example, see our chrome extension. ",
-          "title": "Chrome Extension"
+          "content_html": "We want to make it easier for all New Zealanders– not just lawyers –to access and understand law.",
+          "title": "Easier for all NZ"
+        },
+        {
+          "content_html": "Legal research can be difficult. Finding an answer to a legal problem often requires you to know where to look, before you can start searching for the right information.We’re here to help.",
+          "title": "Legal research can be difficult."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "How OpenLaw NZ Helps",
+      "content": [
+        {
+          "title": "List",
+          "content_html": "We do that by: <br/>\n\n<ul>\n\n<li>\n\nMaking case law more accessible,easy to find and understand. You can use our search to find out more about case law, and use case law to understand how the law works and how legislation is applied in practice.\n\n</li>\n\n<li>\n\nCreating a place where innovative legal micro-sites can be designed, developed and hosted.\n\n</li>\n\n<li>\n\nProviding a case law API for people to build legal data into their own applications and services. For an example, see our \\[chrome extension](https://www.openlaw.nz/plugins).\n\n</li>\n\n</ul>\n\n\n\nYou can use our search to find caselaw, andnavigate between related information. You can also use our plugins (or write your own) to aid your research."
         }
       ]
     },
     {
       "type": "directors",
       "title": "Directors",
-      "directors": [
+      "content": [
         {
-          "name": "Andrew Easterbrook, CEO",
-          "bio": "Andrew is a lawyer, and has worked in technology law, civil litigation and family law since 2009. He has been a Member of the Auckland District Law Society Technology & Law Committee since 2012, and is experienced in web and software development. Andrew went to university at Victoria, Wellington, and now lives in Whangarei.\r\n\r\n",
+          "content_html": "Andrew is a lawyer, and has worked in technology law, civil litigation and family law since 2009. He has been a Member of the Auckland District Law Society Technology & Law Committee since 2012, and is experienced in web and software development. Andrew went to university at Victoria, Wellington, and now lives in Whangarei.",
+          "name": "Andrew Easterbook, CEO",
           "image_url": "/assets/andrew-easterbrook.png"
         },
         {
           "name": "William Parry, CTO",
-          "bio": "William brings 15 years of tech experience across enterprise, advertising and small businesses including 8 years working with open data in projects and hackathons. He has run community coding classes and is passionate about empowering disadvantaged people with technology. William went to university at Victoria, Wellington, and now lives in Sydney.\r\n\r\n",
+          "content_html": "William brings 16 years of tech experience across enterprise, advertising and small businesses including 8 years working with open data in projects and hackathons. He has run community coding classes and is passionate about empowering disadvantaged people with technology. William went to university at Victoria, Wellington, and now lives in Sydney.",
           "image_url": "/assets/will.png"
-        }
-      ]
-    },
-    {
-      "type": "contributors",
-      "title": "Past & Present Contributors",
-      "contributors": [
-        {
-          "title": "Blaine Western",
-          "image_url": "/assets/avatar.png"
-        },
-        {
-          "title": "Tian Bai",
-          "image_url": "/assets/tian-bai.png"
-        },
-        {
-          "title": "Caio Nunes",
-          "image_url": "/assets/caio-nunes.png"
-        },
-        {
-          "title": "Terence Zhong",
-          "image_url": "/assets/terence-zhong.png"
-        },
-        {
-          "title": "Alex Huang",
-          "image_url": "/assets/alex-huang.png"
-        },
-        {
-          "title": "Nicolas Zhou",
-          "image_url": "/assets/Nicolas-zhou.png"
-        },
-        {
-          "title": "Jins Mary Job",
-          "image_url": "/assets/Jins_Mary_Job.png"
-        },
-        {
-          "title": "Dana Iti",
-          "image_url": "/assets/dana-iti.png"
-        },
-        {
-          "title": "Noel Soong",
-          "image_url": "/assets/noel-soong.png"
-        },
-        {
-          "title": "Hanbyul Son",
-          "image_url": "/assets/hanbyul-son.png"
-        },
-        {
-          "title": "Alex Chan",
-          "image_url": "/assets/alex-chan.png"
-        },
-        {
-          "title": "Limei",
-          "image_url": "/assets/limei.png"
-        },
-        {
-          "title": "Ed Haslam",
-          "image_url": "/assets/avatar.png"
-        },
-        {
-          "title": "April Liau",
-          "image_url": "/assets/april-liau.png"
-        },
-        {
-          "title": "Lina Xie",
-          "image_url": "/assets/lina-xie.png"
-        },
-        {
-          "title": "David Paitai",
-          "image_url": "/assets/david-paitai.png"
-        },
-        {
-          "title": "Benedict Stewart",
-          "image_url": "/assets/benedict-stewart.png"
-        },
-        {
-          "title": "Emma Burke",
-          "image_url": "/assets/emma-burke.png"
-        },
-        {
-          "title": "Alex McNichol",
-          "image_url": "/assets/avatar.png"
-        },
-        {
-          "title": "Gwangwoo Kim",
-          "image_url": "/assets/jayden-kim.png"
-        },
-        {
-          "title": "Samuel Jenks",
-          "image_url": "/assets/samuel-jenks.png"
-        },
-        {
-          "title": "Ben Rauzi",
-          "image_url": "/assets/avatar.png"
         }
       ]
     }

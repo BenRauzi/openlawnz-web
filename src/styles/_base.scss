@@ -79,18 +79,21 @@ h6 {
 }
 
 h1 {
+  color: vars.$color-primary;
   font-size: 46px;
   line-height: 48px;
   font-weight: bold;
 }
 
 h2 {
+  color: vars.$color-primary;
   font-size: 40px;
   line-height: 36px;
   font-weight: bold;
 }
 
 h3 {
+  color: vars.$color-primary;
   font-size: 33px;
   line-height: 41px;
   font-weight: bold;
